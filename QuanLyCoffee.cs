@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace QuanLyCF
 {
-    public partial class Form1 : Form
+    public partial class QuanLyCoffee : Form
     {
-        public Form1()
+        public QuanLyCoffee()
         {
             InitializeComponent();
         }
