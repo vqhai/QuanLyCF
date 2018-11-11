@@ -69,7 +69,7 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(46, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(404, 238);
@@ -86,6 +86,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "QuanLyCoffee";
             this.Text = "QuanLyCoffee";
+            this.Load += new System.EventHandler(this.QuanLyCoffee_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

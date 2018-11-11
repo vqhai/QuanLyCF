@@ -15,5 +15,20 @@ namespace QuanLyCF
         {
             InitializeComponent();
         }
+
+        private void QuanLyCoffee_Load(object sender, EventArgs e)
+        {
+            this.Show();
+            this.Enabled = false;
+
+            QuanLyCoffee cf = new QuanLyCoffee();
+            DialogResult result = cf.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                this.Enabled = true;
+                label1.Text = "Welcom to Coffee Shop";
+            }
+        }
     }
 }
