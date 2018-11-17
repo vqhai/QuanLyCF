@@ -21,8 +21,8 @@ namespace QuanLyCF
             this.Show();
             this.Enabled = false;
 
-            QuanLyCoffee cf = new QuanLyCoffee();
-            DialogResult result = cf.ShowDialog();
+            frmLogin frm = new frmLogin();
+            DialogResult result = frm.ShowDialog();
 
             if (result == DialogResult.OK)
             {
