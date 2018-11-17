@@ -1,8 +1,8 @@
-﻿IF DB_ID('CoffeeShop') IS NULL 
-	CREATE DATABASE CoffeeShop
+﻿IF DB_ID('CSDLQuanLyCF') IS NULL 
+	CREATE DATABASE CSDLQuanLyCF
 GO
 
-USE CoffeeShop
+USE CSDLQuanLyCF
 GO
 
 --======================================================
