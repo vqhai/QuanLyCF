@@ -25,8 +25,27 @@ namespace QuanLyCF
             {
                 MessageBox.Show(" Vui long nhap day du username va password ", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
+        
 
+            if (Login(username,password) == true)
+            {
+                DialogResult result = DialogResult.OK;
+                this.DialogResult = result;
+                this.Close();
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Username hoac password khong hop le!", "Login", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                if (result == DialogResult.Cancel)
+                {
+                    Application.Exit();
+                }
+                else
+                {
+                    txtUsername.Focus();
+                }
+            }
+        }
 
             private bool Login(string username, string password)
         {
@@ -49,5 +68,4 @@ namespace QuanLyCF
 
         }
         }
-    }
 }
