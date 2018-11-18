@@ -49,8 +49,8 @@
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.purchasePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sellingPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplier = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -71,8 +71,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(801, 400);
-            this.splitContainer1.SplitterDistance = 267;
+            this.splitContainer1.Size = new System.Drawing.Size(707, 400);
+            this.splitContainer1.SplitterDistance = 235;
             this.splitContainer1.TabIndex = 0;
             // 
             // splitContainer2
@@ -102,7 +102,7 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.dgvProduct);
-            this.splitContainer2.Size = new System.Drawing.Size(530, 400);
+            this.splitContainer2.Size = new System.Drawing.Size(468, 400);
             this.splitContainer2.SplitterDistance = 148;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -231,13 +231,13 @@
             this.name,
             this.purchasePrice,
             this.sellingPrice,
-            this.supplier,
             this.category,
+            this.supplier,
             this.Delete});
             this.dgvProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProduct.Location = new System.Drawing.Point(0, 0);
             this.dgvProduct.Name = "dgvProduct";
-            this.dgvProduct.Size = new System.Drawing.Size(530, 248);
+            this.dgvProduct.Size = new System.Drawing.Size(468, 248);
             this.dgvProduct.TabIndex = 0;
             this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
             // 
@@ -265,17 +265,17 @@
             this.sellingPrice.HeaderText = "Giá bán";
             this.sellingPrice.Name = "sellingPrice";
             // 
-            // supplier
-            // 
-            this.supplier.DataPropertyName = "supplierId";
-            this.supplier.HeaderText = "NCC";
-            this.supplier.Name = "supplier";
-            // 
             // category
             // 
             this.category.DataPropertyName = "categoryId";
             this.category.HeaderText = "Loại";
             this.category.Name = "category";
+            // 
+            // supplier
+            // 
+            this.supplier.DataPropertyName = "supplierId";
+            this.supplier.HeaderText = "NCC";
+            this.supplier.Name = "supplier";
             // 
             // Delete
             // 
@@ -287,7 +287,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 400);
+            this.ClientSize = new System.Drawing.Size(707, 400);
             this.Controls.Add(this.splitContainer1);
             this.Name = "SanPham";
             this.Text = "SanPham";
@@ -328,8 +328,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn purchasePrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn sellingPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn supplier;
         private System.Windows.Forms.DataGridViewTextBoxColumn category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn supplier;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }
