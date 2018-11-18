@@ -16,21 +16,19 @@ namespace QuanLyCF
             InitializeComponent();
         }
 
-        private void NhaCungCap_Load(object sender, EventArgs e)
+         List<NhaCC> GetSupplier()
         {
-            string cnStr = "Server = . ; Database = CSDLQuanLyCF; Integrated security = true";
+            string cnStr = "Server = .; Database = CSDLQuanLyCF; Integrated security = true;";
             SqlConnection cn = new SqlConnection(cnStr);
-
-            string sql = " Select * FROM Supplier";
+            cn.Open();
+            List<NhaCC> list = new List<NhaCC>();
+            string sql = "SELECT * FROM Supplier";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = cn;
             cmd.CommandText = sql;
             cmd.CommandType = CommandType.Text;
 
-            cn.Open();
             SqlDataReader dr = cmd.ExecuteReader();
-
-            List<NhaCC> list = new List<NhaCC>();
             string id, name, address;
             while (dr.Read())
             {
@@ -43,23 +41,40 @@ namespace QuanLyCF
             }
             dr.Close();
             cn.Close();
-
-            dgvSupplier.DataSource = list;
+            return list;
         }
+
+         private void NhaCungCap_Load(object sender, EventArgs e)
+         {
+             dgvSupplier.DataSource = GetSupplier();
+         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string cnStr = "Server = . ; Database = CSDLQuanLyCF; Integrated security = true";
+            string cnStr = "Server = .; Database = CSDLQuanLyCF; Integrated security = true;";
             SqlConnection cn = new SqlConnection(cnStr);
 
             string id, name, address;
+
             id = txtID.Text;
             name = txtName.Text;
-            address = txtAddress.Text; 
+            address = txtAddress.Text;
+
             if (string.IsNullOrEmpty(id))
-                return;
-            string sql = "INSERT INTO Supplier VALUES('" + id + "', N'" + name + "' , N'" + address + "')";
-            SqlCommand cmd = new SqlCommand(sql, cn);
+                MessageBox.Show("ID khong the Rong", "Add supplier");
+            else
+            {
+                string sql = "INSERT INTO Supplier VALUES('" + id + "', N'" + name + "', N'" + address + "')";
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cn.Open();
+                int soDong = cmd.ExecuteNonQuery();
+                if (soDong <= 0)
+                    MessageBox.Show("Thêm thất bại", "Add supplier");
+                else
+                    dgvSupplier.DataSource = GetSupplier();
+                MessageBox.Show("Thêm thành công", "Add supplier");
+                cn.Close();
+            }
         }
     }
 }
