@@ -61,5 +61,19 @@ namespace QuanLyCF
             da.Update(productTable);
         }
 
+        private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int col = e.ColumnIndex;
+
+            if (dgvProduct.Columns[col] is DataGridViewButtonColumn && dgvProduct.Columns[col].Name == "Delete")
+            {
+                int row = e.RowIndex;
+                if (row >= 0 && row < dgvProduct.Rows.Count)
+                {
+                    productTable.Rows[row].Delete();
+                }
+            }
+        }
+
     }
 }

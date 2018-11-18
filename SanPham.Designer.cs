@@ -239,6 +239,7 @@
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.Size = new System.Drawing.Size(530, 248);
             this.dgvProduct.TabIndex = 0;
+            this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
             // 
             // id
             // 
