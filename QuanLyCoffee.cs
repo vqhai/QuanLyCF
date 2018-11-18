@@ -30,5 +30,11 @@ namespace QuanLyCF
                 label1.Text = "Welcom to Coffee Shop";
             }
         }
+
+        private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SanPham frm = new SanPham();
+            frm.ShowDialog();
+        }
     }
 }

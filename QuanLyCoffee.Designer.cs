@@ -58,13 +58,14 @@
             // sảnPhẩmToolStripMenuItem
             // 
             this.sảnPhẩmToolStripMenuItem.Name = "sảnPhẩmToolStripMenuItem";
-            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sảnPhẩmToolStripMenuItem.Text = "Sản phẩm ";
+            this.sảnPhẩmToolStripMenuItem.Click += new System.EventHandler(this.sảnPhẩmToolStripMenuItem_Click);
             // 
             // nhàCungCấpToolStripMenuItem
             // 
             this.nhàCungCấpToolStripMenuItem.Name = "nhàCungCấpToolStripMenuItem";
-            this.nhàCungCấpToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.nhàCungCấpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.nhàCungCấpToolStripMenuItem.Text = "Nhà cung cấp";
             // 
             // label1
