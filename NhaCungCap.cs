@@ -18,7 +18,33 @@ namespace QuanLyCF
 
         private void NhaCungCap_Load(object sender, EventArgs e)
         {
+            string cnStr = "Server = . ; Database = CSDLQuanLyCF; Integrated security = true";
+            SqlConnection cn = new SqlConnection(cnStr);
 
+            string sql = " Select * FROM Supplier";
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = cn;
+            cmd.CommandText = sql;
+            cmd.CommandType = CommandType.Text;
+
+            cn.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            List<NhaCC> list = new List<NhaCC>();
+            string id, name, address;
+            while (dr.Read())
+            {
+                id = dr[0].ToString();
+                name = dr[1].ToString();
+                address = dr[2].ToString();
+
+                NhaCC sup = new NhaCC(id, name, address);
+                list.Add(sup);
+            }
+            dr.Close();
+            cn.Close();
+
+            dgvSupplier.DataSource = list;
         }
     }
 }
