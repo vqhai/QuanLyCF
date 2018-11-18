@@ -40,5 +40,20 @@ namespace QuanLyCF
 
             return ds;
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            DataRow row = productTable.NewRow();
+
+            row["id"] = txtId.Text;
+            row["name"] = txtName.Text;
+            row["purchasePrice"] = txtPurchase.Text;
+            row["sellingPrice"] = txtSelling.Text;
+            row["categoryId"] = txtCategory.Text;
+            row["supplierId"] = txtSupplier.Text;
+
+            productTable.Rows.Add(row);
+        }
+
     }
 }
