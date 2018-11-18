@@ -46,5 +46,20 @@ namespace QuanLyCF
 
             dgvSupplier.DataSource = list;
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            string cnStr = "Server = . ; Database = CSDLQuanLyCF; Integrated security = true";
+            SqlConnection cn = new SqlConnection(cnStr);
+
+            string id, name, address;
+            id = txtID.Text;
+            name = txtName.Text;
+            address = txtAddress.Text; 
+            if (string.IsNullOrEmpty(id))
+                return;
+            string sql = "INSERT INTO Supplier VALUES('" + id + "', N'" + name + "' , N'" + address + "')";
+            SqlCommand cmd = new SqlCommand(sql, cn);
+        }
     }
 }
