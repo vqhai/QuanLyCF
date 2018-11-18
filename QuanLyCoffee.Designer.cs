@@ -85,6 +85,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "QuanLyCoffee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuanLyCoffee";
             this.Load += new System.EventHandler(this.QuanLyCoffee_Load);
             this.menuStrip1.ResumeLayout(false);
