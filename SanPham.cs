@@ -55,11 +55,6 @@ namespace QuanLyCF
             productTable.Rows.Add(row);
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            SqlCommandBuilder builder = new SqlCommandBuilder(da);
-            da.Update(productTable);
-        }
 
         private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
