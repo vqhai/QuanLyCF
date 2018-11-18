@@ -21,7 +21,7 @@ namespace QuanLyCF
             this.Show();
             this.Enabled = false;
 
-            frmLogin frm = new frmLogin();
+            DangNhap frm = new DangNhap();
             DialogResult result = frm.ShowDialog();
 
             if (result == DialogResult.OK)

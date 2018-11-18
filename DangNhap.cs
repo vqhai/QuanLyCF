@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+
 namespace QuanLyCF
 {
-    public partial class frmLogin : Form
+    public partial class DangNhap : Form
     {
-        public frmLogin()
+        public DangNhap()
         {
             InitializeComponent();
         }
@@ -69,3 +70,4 @@ namespace QuanLyCF
         }
         }
 }
+
