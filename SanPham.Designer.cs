@@ -42,7 +42,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,8 +70,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(707, 400);
-            this.splitContainer1.SplitterDistance = 235;
+            this.splitContainer1.Size = new System.Drawing.Size(798, 400);
+            this.splitContainer1.SplitterDistance = 265;
             this.splitContainer1.TabIndex = 0;
             // 
             // splitContainer2
@@ -96,13 +95,12 @@
             this.splitContainer2.Panel1.Controls.Add(this.label3);
             this.splitContainer2.Panel1.Controls.Add(this.label2);
             this.splitContainer2.Panel1.Controls.Add(this.label1);
-            this.splitContainer2.Panel1.Controls.Add(this.btnSave);
             this.splitContainer2.Panel1.Controls.Add(this.btnAdd);
             // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.dgvProduct);
-            this.splitContainer2.Size = new System.Drawing.Size(468, 400);
+            this.splitContainer2.Size = new System.Drawing.Size(529, 400);
             this.splitContainer2.SplitterDistance = 148;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -202,16 +200,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Mã";
             // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(97, 12);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "Lưu";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(16, 12);
@@ -237,7 +225,7 @@
             this.dgvProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProduct.Location = new System.Drawing.Point(0, 0);
             this.dgvProduct.Name = "dgvProduct";
-            this.dgvProduct.Size = new System.Drawing.Size(468, 248);
+            this.dgvProduct.Size = new System.Drawing.Size(529, 248);
             this.dgvProduct.TabIndex = 0;
             this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
             // 
@@ -287,7 +275,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 400);
+            this.ClientSize = new System.Drawing.Size(798, 400);
             this.Controls.Add(this.splitContainer1);
             this.Name = "SanPham";
             this.Text = "SanPham";
@@ -321,7 +309,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dgvProduct;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
