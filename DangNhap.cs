@@ -24,7 +24,7 @@ namespace QuanLyCF
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show(" Vui long nhap day du username va password ", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(" Vui lòng nhập đầy đủ Username và Password ", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         
 
@@ -36,7 +36,7 @@ namespace QuanLyCF
             }
             else
             {
-                DialogResult result = MessageBox.Show("Username hoac password khong hop le!", "Login", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                DialogResult result = MessageBox.Show("Username hoặc password không hợp lệ!", "Login", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                 if (result == DialogResult.Cancel)
                 {
                     Application.Exit();
