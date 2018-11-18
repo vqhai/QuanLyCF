@@ -36,5 +36,11 @@ namespace QuanLyCF
             SanPham frm = new SanPham();
             frm.ShowDialog();
         }
+
+        private void nhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NhaCungCap frm = new NhaCungCap();
+            frm.ShowDialog();
+        }
     }
 }
