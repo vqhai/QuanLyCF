@@ -61,7 +61,7 @@ namespace QuanLyCF
             address = txtAddress.Text;
 
             if (string.IsNullOrEmpty(id))
-                MessageBox.Show("ID khong the Rong", "Add supplier");
+                MessageBox.Show("ID không thể rỗng", "Add supplier");
             else
             {
                 string sql = "INSERT INTO Supplier VALUES('" + id + "', N'" + name + "', N'" + address + "')";
