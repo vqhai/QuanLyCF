@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvSupplier = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.btnThem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -51,13 +52,14 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.dataGridView1);
+            this.splitContainer1.Panel1.Controls.Add(this.dgvSupplier);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.textBox3);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox2);
-            this.splitContainer1.Panel2.Controls.Add(this.textBox1);
+            this.splitContainer1.Panel2.Controls.Add(this.btnThem);
+            this.splitContainer1.Panel2.Controls.Add(this.txtAddress);
+            this.splitContainer1.Panel2.Controls.Add(this.txtName);
+            this.splitContainer1.Panel2.Controls.Add(this.txtID);
             this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
@@ -65,14 +67,14 @@
             this.splitContainer1.SplitterDistance = 283;
             this.splitContainer1.TabIndex = 0;
             // 
-            // dataGridView1
+            // dgvSupplier
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(283, 391);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSupplier.Location = new System.Drawing.Point(0, 0);
+            this.dgvSupplier.Name = "dgvSupplier";
+            this.dgvSupplier.Size = new System.Drawing.Size(283, 391);
+            this.dgvSupplier.TabIndex = 0;
             // 
             // label1
             // 
@@ -101,26 +103,35 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Address";
             // 
-            // textBox1
+            // txtID
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtID.Location = new System.Drawing.Point(90, 51);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(137, 20);
+            this.txtID.TabIndex = 3;
             // 
-            // textBox2
+            // txtName
             // 
-            this.textBox2.Location = new System.Drawing.Point(90, 96);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(137, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtName.Location = new System.Drawing.Point(90, 96);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(137, 20);
+            this.txtName.TabIndex = 4;
             // 
-            // textBox3
+            // txtAddress
             // 
-            this.textBox3.Location = new System.Drawing.Point(90, 136);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(137, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtAddress.Location = new System.Drawing.Point(90, 136);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(137, 20);
+            this.txtAddress.TabIndex = 5;
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(37, 210);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 23);
+            this.btnThem.TabIndex = 6;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
             // 
             // NhaCungCap
             // 
@@ -135,7 +146,7 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -143,12 +154,13 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvSupplier;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Button btnThem;
     }
 }
