@@ -34,7 +34,7 @@ namespace QuanLyCF
             DataSet ds = new DataSet();
 
             string sql = "SELECT * FROM Product";
-            SqlDataAdapter da = new SqlDataAdapter(sql, cn);
+            da = new SqlDataAdapter(sql, cn);
 
             int number = da.Fill(ds);
 
@@ -70,5 +70,10 @@ namespace QuanLyCF
             }
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            SqlCommandBuilder builder = new SqlCommandBuilder(da);
+            da.Update(productTable);
+        }
     }
 }
