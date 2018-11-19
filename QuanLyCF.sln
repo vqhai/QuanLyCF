@@ -1,11 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2047
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyCF", "QuanLyCF.csproj", "{CF9DCD59-39DC-41B5-9D78-C12C17F9B7C5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyCFTest", "..\QuanLyCFTest\QuanLyCFTest.csproj", "{982FF219-44AB-4793-B2CC-F39BBBADA5D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,14 +17,6 @@ Global
 		{CF9DCD59-39DC-41B5-9D78-C12C17F9B7C5}.Release|Any CPU.ActiveCfg = Release|x86
 		{CF9DCD59-39DC-41B5-9D78-C12C17F9B7C5}.Release|x86.ActiveCfg = Release|x86
 		{CF9DCD59-39DC-41B5-9D78-C12C17F9B7C5}.Release|x86.Build.0 = Release|x86
-		{982FF219-44AB-4793-B2CC-F39BBBADA5D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{982FF219-44AB-4793-B2CC-F39BBBADA5D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{982FF219-44AB-4793-B2CC-F39BBBADA5D2}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{982FF219-44AB-4793-B2CC-F39BBBADA5D2}.Debug|x86.Build.0 = Debug|Any CPU
-		{982FF219-44AB-4793-B2CC-F39BBBADA5D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{982FF219-44AB-4793-B2CC-F39BBBADA5D2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{982FF219-44AB-4793-B2CC-F39BBBADA5D2}.Release|x86.ActiveCfg = Release|Any CPU
-		{982FF219-44AB-4793-B2CC-F39BBBADA5D2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
