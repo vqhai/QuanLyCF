@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="734b249e-ed5f-4430-bdb3-1648ce3f865a" name="Admin@QUOCHAI 2018-11-19 20:01:52" runUser="QUOCHAI\Admin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="1dfff738-d866-4d91-94fe-5cf086fc8cbd">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Admin_QUOCHAI 2018-11-19 20_01_52">
+      <DeploymentItem filename="C:\Users\Admin\Desktop\bt\QuanLyCF\bin\Debug\QuanLyCF.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2018-11-19T20:01:52.1222108+07:00" queuing="2018-11-19T20:01:52.1822079+07:00" start="2018-11-19T20:01:52.2502041+07:00" finish="2018-11-19T20:01:52.6841823+07:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestMethod1" storage="c:\users\admin\desktop\bt\quanlycf\quanlycftest\bin\debug\quanlycftest.dll" id="97d4e4f0-2f93-962d-4e46-14e69b10a390">
+      <Execution id="cce8e4e9-65e1-4163-88c8-3a10678a7f3e" />
+      <TestMethod codeBase="C:/Users/Admin/Desktop/bt/QuanLyCF/QuanLyCFTest/bin/Debug/QuanLyCFTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="QuanLyCFTest.UnitTest1, QuanLyCFTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod1" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="97d4e4f0-2f93-962d-4e46-14e69b10a390" executionId="cce8e4e9-65e1-4163-88c8-3a10678a7f3e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="cce8e4e9-65e1-4163-88c8-3a10678a7f3e" testId="97d4e4f0-2f93-962d-4e46-14e69b10a390" testName="TestMethod1" computerName="QUOCHAI" duration="00:00:00.0228438" startTime="2018-11-19T20:01:52.2542041+07:00" endTime="2018-11-19T20:01:52.6681832+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cce8e4e9-65e1-4163-88c8-3a10678a7f3e">
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -16,56 +16,42 @@ namespace QuanLyCF
         {
             InitializeComponent();
         }
-
+        DataProvider daP;
+        public string type;
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            daP = new DataProvider();
             {
-                MessageBox.Show(" Vui lòng nhập đầy đủ Username và Password ", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        
-
-            if (Login(username,password) == true)
-            {
-                DialogResult result = DialogResult.OK;
-                this.DialogResult = result;
-                this.Close();
-            }
-            else
-            {
-                DialogResult result = MessageBox.Show("Username hoặc password không hợp lệ!", "Login", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                if (result == DialogResult.Cancel)
+                string userName = txtUsername.Text;
+                string password = txtPassword.Text;
+                if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password))  
                 {
-                    Application.Exit();
+                    MessageBox.Show("Yêu cầu thông tin chưa đầy đủ ", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    txtUsername.Focus();
+
+                    if (daP.Login(userName, password))
+                    {
+                        DangNhap frm = new DangNhap();
+                        this.DialogResult = DialogResult.OK;
+                        this.Hide();
+
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show("UserName hoặc Password không đúng !", "Login", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                        if (result == DialogResult.Cancel)
+                        {
+                            Application.Exit();
+                        }
+                        else
+                        {
+                            txtUsername.Focus();
+                        }
+                    }
                 }
             }
-        }
-
-            private bool Login(string username, string password)
-        {
-            string cnStr = "Server = .; Database = CSDLQuanLyCF; Integrated security = true;";
-            SqlConnection cn = new SqlConnection(cnStr);
-            cn.Open();
-            string sql = "SELECT COUNT(UserName) FROM Users WHERE Username = '" + username + "' AND Password = '" + password + "'";
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = cn;
-            cmd.CommandText = sql;;
-            cmd.CommandType = CommandType.Text;
-            int count = (int)cmd.ExecuteScalar();
-
-            cn.Close();
-
-            if ( count == 1 )
-                return true;
-            else 
-                return false;
 
         }
         }

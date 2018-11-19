@@ -14,66 +14,55 @@ namespace QuanLyCF
     {
         SqlConnection cn;
         DataTable productTable;
-        SqlDataAdapter da;
         public SanPham()
         {
             InitializeComponent();
         }
-
+        ChucNang cng = new ChucNang();
         private void SanPham_Load(object sender, EventArgs e)
         {
-            string cnStr = "Server = .; Database = CSDLQuanLyCF; Integrated security = true;";
-            cn = new SqlConnection(cnStr);
-
-            DataSet ds = GetProduct();
-            productTable = ds.Tables[0];
-            dgvProduct.DataSource = productTable;
-        }
-        DataSet GetProduct()
-        {
-            DataSet ds = new DataSet();
-
-            string sql = "SELECT * FROM Product";
-            da = new SqlDataAdapter(sql, cn);
-
-            int number = da.Fill(ds);
-
-            return ds;
+            string cnStr = "Server = .; Database = CSDLQuanLyCF; Integrated security = true ;";
+            cng.cn = new SqlConnection(cnStr);
+            DataSet ds = cng.GetData();
+            cng.memberTable = ds.Tables[0];
+            dgvProduct.DataSource = cng.memberTable;
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            DataRow row = productTable.NewRow();
-
-            row["id"] = txtId.Text;
-            row["name"] = txtName.Text;
-            row["purchasePrice"] = txtPurchase.Text;
-            row["sellingPrice"] = txtSelling.Text;
-            row["categoryId"] = txtCategory.Text;
-            row["supplierId"] = txtSupplier.Text;
-
-            productTable.Rows.Add(row);
-        }
 
 
         private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int col = e.ColumnIndex;
-
             if (dgvProduct.Columns[col] is DataGridViewButtonColumn && dgvProduct.Columns[col].Name == "Delete")
             {
                 int row = e.RowIndex;
                 if (row >= 0 && row < dgvProduct.Rows.Count)
                 {
-                    productTable.Rows[row].Delete();
+                    cng.Del(row, cng.memberTable);
                 }
             }
         }
 
+        private void SanPham_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();  
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            cng.Them(cng.memberTable, txtId.Text, txtName.Text, txtPurchase.Text, txtSelling.Text, txtCategory.Text, txtSupplier.Text);
+            dgvProduct.DataSource = cng.memberTable;
+            txtId.Text = txtName.Text = txtPurchase.Text = txtSelling.Text = txtCategory.Text =  txtSupplier.Text= "";
+            txtId.Focus();
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
-            SqlCommandBuilder builder = new SqlCommandBuilder(da);
-            da.Update(productTable);
+            cng.Update(cng.memberTable);
+            MessageBox.Show("Cập nhập thành công ", "Cập Nhập");
+            txtId.Text = txtName.Text = txtPurchase.Text = txtSelling.Text = txtCategory.Text = txtSupplier.Text = "";
+            txtId.Focus();
         }
+
     }
 }
