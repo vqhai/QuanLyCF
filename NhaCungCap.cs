@@ -16,7 +16,7 @@ namespace QuanLyCF
             InitializeComponent();
         }
 
-         List<NhaCC> GetSupplier()
+        List<NhaCC> GetSupplier()
         {
             string cnStr = "Server = .; Database = CSDLQuanLyCF; Integrated security = true;";
             SqlConnection cn = new SqlConnection(cnStr);
@@ -44,10 +44,10 @@ namespace QuanLyCF
             return list;
         }
 
-         private void NhaCungCap_Load(object sender, EventArgs e)
-         {
-             dgvSupplier.DataSource = GetSupplier();
-         }
+        private void NhaCungCap_Load(object sender, EventArgs e)
+        {
+            dgvSupplier.DataSource = GetSupplier();
+        }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -93,5 +93,6 @@ namespace QuanLyCF
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cn.Open();
             }
+        }
     }
 }
