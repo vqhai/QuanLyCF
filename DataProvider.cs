@@ -30,7 +30,6 @@ namespace QuanLyCF
         {
             cnn.Close();
         }
-        public string type = null;
         public bool Login(string UserName, string Password)
         {
             if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(Password))
