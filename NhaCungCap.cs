@@ -76,5 +76,22 @@ namespace QuanLyCF
                 cn.Close();
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string cnStr = "Server= .;Database = CSDLQquanLyCF;Integrated Security=True";
+            SqlConnection cn = new SqlConnection(cnStr);
+
+            string id;
+            id = txtID.Text;
+
+            if (string.IsNullOrEmpty(id))
+                MessageBox.Show("ban phai nhap ID để xóa", "Xóa NCC");
+            else
+            {
+                string sql = "DELETE * FROM Supplier WHERE id = " + id;
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cn.Open();
+            }
     }
 }
